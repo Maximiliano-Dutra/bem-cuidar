@@ -2,19 +2,49 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bem Cuidar Desenvolvimento</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app">
+  <header>
     <h1>Bem Cuidar Desenvolvimento</h1>
-    <div id="auth">
-      <button onclick="showLogin()">Login</button>
-      <button onclick="showRegister()">Cadastro</button>
-    </div>
-    <div id="content"></div>
-  </div>
-  <script src="app.js"></script>
+    <nav>
+      <a href="#" onclick="showPage('home')">Início</a>
+      <a href="#" onclick="showPage('cursos')">Cursos</a>
+      <a href="#" onclick="showPage('login')">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page">
+      <h2>Seja bem-vindo(a)</h2>
+      <p>Plataforma de cursos e certificados para profissionais da geriatria.</p>
+    </section>
+
+    <section id="cursos" class="page" style="display:none">
+      <h2>Cursos Disponíveis</h2>
+      <ul>
+        <li>Cuidados com idosos acamados</li>
+        <li>Alimentação e nutrição na terceira idade</li>
+        <li>Primeiros socorros em instituições de longa permanência</li>
+      </ul>
+    </section>
+
+    <section id="login" class="page" style="display:none">
+      <h2>Área do Aluno</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required /><br />
+        <input type="password" placeholder="Senha" required /><br />
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bem Cuidar Desenvolvimento</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
