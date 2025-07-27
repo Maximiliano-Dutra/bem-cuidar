@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem Cuidar Desenvolvimento</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Bem Cuidar Desenvolvimento</h1>
+      <nav id="nav" style="display: none;">
+        <button onclick="navigate('dashboard')">Cursos</button>
+        <button onclick="navigate('certificados')">Certificados</button>
+        <button onclick="navigate('gestor')">Gestor</button>
+        <button onclick="logout()">Sair</button>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="login-section">
+        <h2>Login do Aluno</h2>
+        <input type="text" id="username" placeholder="Usuário" />
+        <input type="password" id="password" placeholder="Senha" />
+        <button onclick="login()">Entrar</button>
+      </section>
+
+      <section id="dashboard" style="display: none;">
+        <h2>Meus Cursos</h2>
+        <ul id="curso-lista"></ul>
+      </section>
+
+      <section id="certificados" style="display: none;">
+        <h2>Certificados</h2>
+        <p>Área de emissão de certificados em breve.</p>
+      </section>
+
+      <section id="gestor" style="display: none;">
+        <h2>Painel do Gestor</h2>
+        <div id="alunos"></div>
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
