@@ -1,0 +1,1 @@
+<!DOCTYPE html><html><head><title>Login</title></head><body><h2>Login</h2><input type='text' placeholder='Email'><br><input type='password' placeholder='Senha'><br><button>Entrar</button></body></html>
